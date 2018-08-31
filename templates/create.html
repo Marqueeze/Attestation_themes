@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Create subject</h1>
+<form action="" method="post" name="subject">
+    {{form.hidden_tag()}}
+    <p>
+        Subject's name:<br>
+        {{ form.name }}<br>
+        {% for error in form.errors.name %}
+        <span class="error">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        Semesters:<br>
+        {{ form.semesters }}<br>
+        {% for error in form.errors.semesters %}
+        <span class="error">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        Users, allowed to refactor:<br>
+        {{ form.allowed_users }}<br>
+        {% for error in form.errors.allowed_users %}
+        <span class="error">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p><input type="submit" class="form-element button" value="Send"></p>
+</form>
+{% endblock %}

@@ -1,0 +1,195 @@
+.error{
+    color: red;
+}
+
+#hat{
+	display: block;
+	height: 35px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 0px;
+	background: #fff url(/static/images/logo.jpg) right no-repeat;
+	background-size: 35px;
+	z-index: 999;
+}
+
+#menu{
+	display: inline-block;
+	position: fixed;
+	top: 40px;
+	left: 5px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.form-element{
+	margin: 0px;
+	padding: 0px;
+}
+
+.form-element.button{
+	min-width: 100px;
+	width: auto;
+	height: 40px;
+	border-radius: 20px;
+	background-color: #909;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	color: #fff;
+	overflow: hidden;
+	box-shadow: 2px 3px 5px rgba(0,0,0,.7);
+}
+
+.form-element.button:hover{
+	cursor: pointer;
+	color: #fff;
+	background-color: #a0a;
+}
+
+.form-element.button:active{
+	color: #eee;
+	background-color: #707;
+	
+	box-shadow: inset -1px -2px 15px #fff;
+}
+
+.att-themes{
+	margin: 0px 10px;
+	max-width: 300px;
+	max-height: 500px;
+	min-width: 50px;
+	min-height: 100px;
+	overflow: auto;
+	display: inline-block;
+}
+
+.att-themes:before{
+	display: block;
+	font-size: 18px;
+	font-style: Tahoma, Arial;
+	font-weight: bold;
+}
+
+.att-themes.number-0:before{
+	content: "Attestation 1:";
+}
+
+.att-themes.number-1:before{
+	content: "Attestation 2:";
+}
+
+.att-themes.number-2:before{
+	content: "Attestation 3:";
+}
+
+#flashed{
+	margin: 0px;
+	font-size: 24px;
+	text-shadow: 0px 1px 0px #fff;
+	font-family: Tahoma, Arial;
+}
+
+h1{
+	margin: 0px;
+	color: #909;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+body{
+	padding-left: 60px;
+	margin-top: 35px;
+	background: -moz-linear-gradient(-45deg, #ddddfb 5%, #fff 95%);
+	height: 100%;
+}
+
+#subjects-button{
+	display: block;
+}
+
+.menu{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font: 1em 'PT Sans', Tahoma, Arial;
+	text-transform: uppercase;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 50px;
+}
+
+.menu li{
+	height: 50px;
+	width: 50px;
+	overflow: hidden;
+	
+	-moz-transition: width .3s ease-in-out, height .3s ease-in-out .3s;
+}
+
+.menu li:hover{
+	width: 250px;
+	height: 133px;
+	line-height: 133px;
+}
+
+.menu li a{
+	display: block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	background: #bbb;
+	padding: 0px;
+	margin: 1px;
+	color: #fff;
+	padding-left: 15px;
+	cursor: pointer;
+	
+	-moz-transition: background .3s ease-in-out;
+}
+
+.menu li a:first-child{
+	font-size: 1.1 em;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	text-indent: 40px; 
+}
+
+.menu li a:hover{
+	background: #2fc5ff;
+}
+
+.menu li a:first-child:before{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 0px;
+	opacity: .7;
+}
+
+.subject a:first-child:before{
+	background: url(/static/images/paper.png) center no-repeat;
+}
+
+.change-info a:first-child:before{
+	background: url(/static/images/info.png) center no-repeat;
+}
+
+.settings a:first-child:before{
+	background: url(/static/images/settings.png) center no-repeat;
+}
+
+.refactoring{
+    display: inline-block;
+}
+
+.refactor-atts{
+    margin:0;
+    padding:0;
+}
+

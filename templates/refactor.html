@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Here's attestation themes of {{subject.name}} in {{semester}} semester</h1>
+<div>
+<form action="" method="post" name="send_changes">
+    {{ref_form.hidden_tag()}}
+
+    <div class="refactoring">
+        Name:<br>
+	    {{subj_form.name}}
+    </div>
+	<div class="refactoring">
+	    Semesters:<br>
+	    {{subj_form.semesters}}
+    </div>
+    <br>
+    <br>
+    <div class="att-themes refactor-atts">
+        Attestation 1:<br>
+        {{ref_form.att1}}
+    </div>
+    <div class="att-themes refactor-atts">
+        Attestation 2:<br>
+        {{ref_form.att2}}
+    </div>
+    <div class="att-themes refactor-atts">
+        Attestation 3:<br>
+        {{ref_form.att3}}
+    </div>
+    <br>
+    <div class="refactoring">
+        Users to add:<br>
+        {{ref_form.users_to_add}}
+    </div>
+    <div class="refactoring">
+        Users to delete:<br>
+        {{ref_form.users_to_delete}}
+    </div>
+
+    <p><input type="submit" class="form-element button" value=" Send changes "></p>
+</form>
+</div>
+{% endblock %}

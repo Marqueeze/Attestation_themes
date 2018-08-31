@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Here's attestation themes of {{name}} in {{semester}} semester</h1>
+{% for i in range(3) %}
+<div class="att-themes number-{{i}}">
+        {% for line in themes[i].split('\r\n') %}
+            {{line}}<br>
+        {% endfor %}
+</div>
+{% endfor %}
+<form action="/refactor_subjects/{{name}}/{{semester}}" method="post" name="refactor">
+    <input type="submit" class="form-element button" id="subjects-button" value=" Refactor ">
+</form>
+{% endblock %}

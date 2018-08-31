@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Personal data</h1>
+<form action="" method="post" name="login">
+    {{form.hidden_tag()}}
+    <p>
+        Please enter your Login:<br>
+        {{form.login(size=80)}}<br>
+        {% for error in form.errors.login %}
+        <span class="error">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        Please enter your E-mail:<br>
+        {{form.email(size=80)}}<br>
+        {% for error in form.errors.email %}
+        <span class="error">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        Enter your special password if you have some:<br>
+        {{form.special_password(size=50)}}<br>
+        {% for error in form.errors.special_password %}
+         <span class="error">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p><input type="submit" class="form-element button" value="Change"></p>
+</form>
+{% endblock %}
